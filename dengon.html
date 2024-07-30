@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="uft-8"/>
+      <script>
+const tells = [];
+function send(texts) {
+  if (texts == "") {
+    alert("空文字は送信できません");
+  } else {
+    if (tells.length == 3) {
+      tells.pop();
+    }
+    tells.unshift(texts);
+    text1.innerText = tells[0];
+    text2.innerText = tells[1];
+    text3.innerText = tells[2];
+    alert("送信完了");
+  }
+  enter.value = "";
+}
+</script>
+  </head>
+  <body>
+伝言板
+<p id="text1"> 伝言はありません </p>
+<p id="text2"> 伝言はありません </p>
+<p id="text3"> 伝言はありません </p>
+<input id="enter">
+<button onclick="send(enter.value);">送信</button>
+  </body>
+</html>
